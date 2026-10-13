@@ -1,16 +1,67 @@
-# parcial2icm
+# Parcial 2 ICM - Concéntrese
 
-A new Flutter project.
+Aplicación móvil desarrollada en Flutter como parte del Parcial 2.
 
-## Getting Started
+El proyecto implementa un juego de memoria llamado **Concéntrese**, en el que el jugador debe recordar una secuencia de números y responder correctamente para aumentar su puntaje.
 
-This project is a starting point for a Flutter application.
+## Objetivo
 
-A few resources to get you started if this is your first Flutter project:
+Desarrollar una aplicación móvil utilizando Flutter que permita practicar conceptos de:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Manejo de estado.
+- Navegación entre pantallas.
+- Temporizadores.
+- Validación de datos.
+- Manejo de puntajes.
+- Uso de Provider.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Funcionamiento del juego
+
+1. El usuario ingresa su nombre.
+2. Se inicia una partida con 5 vidas.
+3. El sistema genera números aleatorios entre 0 y 100.
+4. La secuencia se muestra durante algunos segundos.
+5. Después, la secuencia desaparece y el jugador debe ingresar el último número mostrado.
+6. Si la respuesta es correcta, aumenta el puntaje.
+7. Si la respuesta es incorrecta, se pierde una vida.
+8. En cada ronda se agrega un nuevo número.
+9. El juego termina cuando el jugador pierde todas sus vidas.
+
+## Pantallas
+
+### Pantalla principal
+
+Permite:
+
+- Ingresar el nombre del jugador.
+- Iniciar una nueva partida.
+- Consultar el mejor jugador.
+
+### Pantalla de juego
+
+Muestra:
+
+- Secuencia de números.
+- Temporizador.
+- Nombre del competidor.
+- Puntaje actual.
+- Vidas restantes.
+- Campo para ingresar la respuesta.
+- Botón para validar.
+
+### Mejor jugador
+
+Muestra el jugador con el mejor puntaje registrado durante la sesión.
+
+También muestra:
+
+- Nombre.
+- Puntaje.
+- Fecha y hora del resultado.
+
+## Manejo de estado
+
+El proyecto utiliza la librería:
+
+```dart
+provider: ^6.1.5
